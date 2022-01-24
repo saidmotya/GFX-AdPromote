@@ -1,0 +1,18 @@
+<resources>
+
+    <color name="white">@android:color/white</color>
+    <color name="gray_dark">#454545</color>
+
+
+    <color name="button_install">#2196F3</color>
+    <color name="color_banner_text_title">#1B76BD</color>
+
+    <color name="color_rating_light">#9F9F9F</color>
+    <color name="color_rating_dark">#606060</color>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".SecondActivity">
+
+
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:text="Hello Activity 2"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hello"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Start Activity" />
+
+
+
+
+
+
+    <com.gfx.adPromote.BannerPromote
+        android:id="@+id/banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:banner_contentColor="#E41000"
+        app:banner_installColor="#FF5722"
+        android:layout_alignParentBottom="true">
+
+    </com.gfx.adPromote.BannerPromote>
+
+
+
+
+</RelativeLayout>

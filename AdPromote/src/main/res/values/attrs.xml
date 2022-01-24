@@ -1,0 +1,19 @@
+<resources>
+
+    <declare-styleable name="BannerView">
+        <attr name="banner_installTitle" format="string" />
+        <attr name="banner_installColor" format="color" />
+        <attr name="banner_contentColor" format="color" />
+        <attr name="banner_bodyColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="NativeView">
+        <attr name="native_installTitle" format="string" />
+        <attr name="native_installColor" format="color" />
+        <attr name="native_contentColor" format="color" />
+        <attr name="native_bodyColor" format="color" />
+        <attr name="native_installRadius" format="integer" />
+    </declare-styleable>
+
+</resources>

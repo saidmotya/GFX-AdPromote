@@ -1,0 +1,25 @@
+<resources>
+
+
+    <style name="InterstitialStyle" parent="android:Theme.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/AdStyleFromBottom</item>
+
+    </style>
+
+    <style name="AdStyleFromBottom" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="RatingBarStyle" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/color_rating_light</item>
+        <item name="colorControlActivated">@color/color_rating_dark</item>
+    </style>
+
+
+</resources>
