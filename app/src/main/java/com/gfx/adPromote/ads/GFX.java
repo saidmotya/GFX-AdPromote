@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class GFX {
 
-    public static String AdPromoteLink = "https://fnf-friday-night-funny-pico-vs-ugh.com/AdPromoteLib/MyPromote.json";
+    public static String AdPromoteLink = "https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/MyPromote.json";
 
 
     public static void setLog(String log){
