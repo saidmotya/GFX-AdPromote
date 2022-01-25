@@ -247,12 +247,15 @@ public class ConnectionPromote {
 
     private String generatePeople() {
         try {
-            Random random = new Random();
-            int index = random.nextInt(10);
-            return index+" thousand";
+            //Random random = new Random();
+            //int index = random.nextInt(10);
+            return getRandom(10, 90)+" thousand"; //generate a range from 10 to 90 K.
         } catch (Exception e) {
             return "6 thousand";
         }
+    }
+    private int getRandom(int min, int max) {
+        return (new Random()).nextInt((max - min) + 1) + min;
     }
 
     private boolean isAppsAdded(String names, String icon, String downloads, String packageName,String appPreview) {
