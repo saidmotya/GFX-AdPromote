@@ -4,7 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/GFX-AdPromote.iml" filepath="$PROJECT_DIR$/.idea/modules/GFX-AdPromote.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.iml" filepath="$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AdPromote/GFX-AdPromote.AdPromote.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GFX-AdPromote.app.unitTest.iml" />
     </modules>
   </component>
 </project>

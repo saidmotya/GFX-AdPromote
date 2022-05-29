@@ -20,6 +20,9 @@ public class PromotePrefs {
     private final String RATE_COUNTER = "RATE_COUNTER_";
     private final String RATE_PEOPLE = "RATE_PEOPLE";
 
+    private final String VIEWS_COUNTER = "VIEWS_COUNTER_";
+    private final String LIKE_COUNTER = "LIKE_COUNTER_";
+
     @SuppressLint("CommitPrefEdits")
     public PromotePrefs(Context context) {
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -53,6 +56,24 @@ public class PromotePrefs {
 
     public String getRatePeople(int position) {
         return prefs.getString(RATE_PEOPLE+position, "");
+    }
+
+    public void setViewsCounter(int position,String downloads) {
+        prefEditor.putString(VIEWS_COUNTER +position, downloads);
+        prefEditor.apply();
+    }
+
+    public String getViewsCounter(int position) {
+        return prefs.getString(VIEWS_COUNTER +position, "");
+    }
+
+    public void setLikeCounter(int position,String likes) {
+        prefEditor.putString(LIKE_COUNTER + position, likes);
+        prefEditor.apply();
+    }
+
+    public String getLikeCounter(int position) {
+        return prefs.getString(LIKE_COUNTER +position, "12K");
     }
 
 

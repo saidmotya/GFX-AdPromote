@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         buildInterstitial();
         buildBanner();
         buildNative();
@@ -63,13 +64,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buildInterstitial(){
+
         interstitialPromote = new InterstitialPromote(MainActivity.this);
-        interstitialPromote.setStyle(InterstitialStyle.Advance);
+        interstitialPromote.setStyle(InterstitialStyle.Standard);
         interstitialPromote.setInstallColor(R.color.my_color); //color of button from resource.
         //interstitialAd.setInstallColor("#E91E63"); //color of button from string.
-        interstitialPromote.setTimer(5);//5 second to closed the Ad.
-        interstitialPromote.setInstallTitle("Play");
-        interstitialPromote.setRadiusButton(10); //corner of button radius.
+        interstitialPromote.setTimer(0);//5 second to closed the Ad.
+        interstitialPromote.setInstallTitle("Install now");
+        interstitialPromote.setRadiusButton(50); //corner of button radius.
         interstitialPromote.setOnInterstitialAdListener(new OnInterstitialAdListener() {
             @Override
             public void onInterstitialAdLoaded() {

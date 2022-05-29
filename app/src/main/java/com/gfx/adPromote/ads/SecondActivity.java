@@ -7,16 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.gfx.adPromote.BannerPromote;
-import com.gfx.adPromote.Interfaces.OnBannerListener;
-import com.gfx.adPromote.InterstitialPromote;
+import com.gfx.adPromote.Interfaces.OnAdClosed;
+import com.gfx.adPromote.Interfaces.OnYoutubeInterstitialListener;
+import com.gfx.adPromote.InterstitialYoutube;
+import com.gfx.adPromote.YoutubeStyle;
 
 
 public class SecondActivity extends AppCompatActivity {
 
-    private BannerPromote bannerPromote;
-
-    private InterstitialPromote interstitialPromote;
+    private InterstitialYoutube interstitialYoutube;
 
     @SuppressLint("NewApi")
     @Override
@@ -25,39 +24,56 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
 
+        interstitialYoutube = new InterstitialYoutube(this, YoutubeStyle.Normal);
+        //interstitialYoutube.setTimer(10);
+        interstitialYoutube.setRadiusButtonOpenAd(5);
+        interstitialYoutube.setDescriptionTitle("Hello world ! this a short description of what i'm talking about");
+        //interstitialYoutube.setOpenAdColor("#FF9800");
+        interstitialYoutube.setOnYoutubeInterstitialListener(new OnYoutubeInterstitialListener() {
+            @Override
+            public void onYoutubeInterstitialLoaded() {
+                GFX.setLog("interstitialYoutube loaded.");
+            }
+
+            @Override
+            public void onYoutubeInterstitialClosed() {
+                GFX.setLog("interstitialYoutube closed.");
+            }
+
+            @Override
+            public void onYoutubeInterstitialClicked(String type) {
+                GFX.setLog("interstitialYoutube clicked with type : " + type);
+            }
+
+            @Override
+            public void onYoutubeInterstitialFailedToLoad(String error) {
+                GFX.setLog("interstitialYoutube failed to loading  : " + error);
+
+            }
+        });
+
         findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity(new Intent(getApplicationContext(),MainActivity.class));
-               finish();
+
+                interstitialYoutube.show();
+                interstitialYoutube.setOnAdClosed(new OnAdClosed() {
+                    @Override
+                    public void onAdClosed() {
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        finish();
+                    }
+                });
+
 
             }
         });
-
-
-        bannerPromote = findViewById(R.id.banner_view);
-        bannerPromote.setOnBannerListener(new OnBannerListener() {
-            @Override
-            public void onBannerAdLoaded() {
-                GFX.setLog("banner loaded.");
-            }
-
-            @Override
-            public void onBannerAdClicked() {
-                GFX.setLog("banner clicked.");
-
-            }
-
-            @Override
-            public void onBannerAdFailedToLoad(String error) {
-                GFX.setLog("banner failed to load : "+error);
-
-            }
-        });
-
 
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }

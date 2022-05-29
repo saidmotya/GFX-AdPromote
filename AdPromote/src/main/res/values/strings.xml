@@ -8,5 +8,15 @@
     <string name="_6_thousand">6 thousand</string>
     <string name="close">Close</string>
     <string name="todo">TODO</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="watch_video">Watch video</string>
+    <string name="watch_now">Watch Now</string>
+    <string name="watch_on">Watch on</string>
+    <string name="youtube_description">+100 funny video for you</string>
+
+    <string name="youtube_greeting">We are on YOUTUBE ! \nBest videos for you</string>
+    <string name="youtube_long_description">We invite you to visit us on our YouTube channel and discover a lot of video challenge games and funny videos.</string>
+    <string name="open">Open Ad</string>
+    <string name="million_subscribe">Discover more videos !</string>
 
 </resources>

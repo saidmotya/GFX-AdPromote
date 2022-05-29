@@ -5,9 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFEF"
+    android:background="#E8E8E8"
     tools:context=".SecondActivity">
 
+
+    <com.gfx.adPromote.NativeYoutube
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:native_yt_showPreview="true"
+        app:native_yt_bodyColor="#F8F8F8"
+        app:native_yt_buttonColor="#673AB7"
+        app:native_yt_titleButton="watch video"
+        app:native_yt_adColor="#4CAF50"
+        >
+
+    </com.gfx.adPromote.NativeYoutube>
 
 
     <TextView
@@ -33,16 +45,17 @@
 
 
 
-    <com.gfx.adPromote.BannerPromote
-        android:id="@+id/banner_view"
+    <com.gfx.adPromote.BannerYoutube
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:banner_contentColor="#E41000"
-        app:banner_installColor="#FF5722"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        app:banner_yt_buttonColor="#2196F3"
+        app:banner_yt_bodyColor="#EFEFEF"
+        app:banner_yt_contentColor="#171717"
+        app:banner_yt_IconsColor="#171717"
+        >
 
-    </com.gfx.adPromote.BannerPromote>
-
+    </com.gfx.adPromote.BannerYoutube>
 
 
 

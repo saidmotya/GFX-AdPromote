@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,9 +12,9 @@
         android:id="@+id/native_ad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:native_installTitle="Install"
         app:native_installColor="#4CAF50"
-        app:native_installRadius="5" />
+        app:native_installRadius="5"
+        app:native_installTitle="Install" />
 
     <Button
         android:id="@+id/start_activity"
@@ -25,19 +24,16 @@
         android:text="Start Activity" />
 
 
-
-
-
-
     <com.gfx.adPromote.BannerPromote
         android:id="@+id/banner_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:banner_bodyColor="#FFFFFF"
         app:banner_contentColor="#E41000"
         app:banner_installColor="#FF5722"
-        android:layout_alignParentBottom="true"/>
-
-
+        app:banner_installTitle="Install"
+        />
 
 
 </RelativeLayout>

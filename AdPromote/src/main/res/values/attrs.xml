@@ -16,4 +16,27 @@
         <attr name="native_installRadius" format="integer" />
     </declare-styleable>
 
+
+    <declare-styleable name="NativeYoutube">
+        <attr name="native_yt_titleButton" format="string" />
+        <attr name="native_yt_buttonColor" format="color" />
+        <attr name="native_yt_adColor" format="color" />
+        <attr name="native_yt_bodyColor" format="color" />
+        <attr name="native_yt_showPreview" format="boolean" />
+        <attr name="native_yt_buttonRadius" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="BannerYoutube">
+        <attr name="banner_yt_titleButton" format="string" />
+        <attr name="banner_yt_description" format="string" />
+        <attr name="banner_yt_titleColor" format="color" />
+        <attr name="banner_yt_buttonColor" format="color" />
+        <attr name="banner_yt_contentColor" format="color" />
+        <attr name="banner_yt_bodyColor" format="color" />
+        <attr name="banner_yt_IconsColor" format="color" />
+
+
+    </declare-styleable>
+
 </resources>

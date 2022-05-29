@@ -12,6 +12,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.util.List;
+
 /**
  * Created by SAID MOTYA on 01/01/2022.
  * contact on Facebook : https://web.facebook.com/motya.said
@@ -26,6 +27,13 @@ public class AppsConfig {
     public static String appPackage = "packageName";
     public static String appPreview = "preview";
     public static String screenShot = "screenShot";
+
+    public static String youtubePromote = "YoutubePromote";
+    public static String youtubeTitle = "title";
+    public static String youtubeIcon = "icon";
+    public static String youtubePreview = "preview";
+    public static String youtubeWatch = "watch";
+    public static String youtubeChannel = "channel";
 
 
     public static String[] downloadCount = new String[]{
@@ -46,7 +54,7 @@ public class AppsConfig {
             4.8f,
             4.9f,
             5.0f,
-            };
+    };
 
     public static void openAdLink(Context context, String link) {
 
@@ -61,7 +69,7 @@ public class AppsConfig {
             }
 
         } else {
-            Toast.makeText(context, "Failed to get Ad link.", Toast.LENGTH_SHORT).show();
+            setToast(context, "Failed to get Ad link.");
         }
     }
 
@@ -90,7 +98,7 @@ public class AppsConfig {
             if (isIntentAvailable(context, intentStore)) {
                 context.startActivity(intentStore);
             } else {
-                Toast.makeText(context, "Failed to open Ad.", Toast.LENGTH_SHORT).show();
+                setToast(context, "Failed to open Ad.");
             }
 
         }
@@ -103,7 +111,7 @@ public class AppsConfig {
             intentMarket.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             context.startActivity(intentMarket);
         } catch (ActivityNotFoundException localActivityNotFoundException) {
-            Toast.makeText(context, "Failed to open Ad.", Toast.LENGTH_SHORT).show();
+            setToast(context, "Failed to open Ad.");
 
         }
     }
@@ -116,8 +124,65 @@ public class AppsConfig {
         return list.size() > 0;
     }
 
+    public static void youtubeSubscribeChannel(Context context, String channelId) {
+        try {
+            Uri channel = Uri.parse("https://www.youtube.com/" + channelId + "?sub_confirmation=1");
+            Intent intent = new Intent(Intent.ACTION_VIEW, channel);
+            intent.setPackage(youtubePackage(context.getApplicationContext()));
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            context.startActivity(intent);
+        } catch (Exception e) {
+            setToast(context, "Failed to open Channel.");
+        }
+
+    }
+
+    public static void youtubeWatchVideo(Context context, String videoLink) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoLink));
+            intent.setPackage(youtubePackage(context.getApplicationContext()));
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            context.startActivity(intent);
+        } catch (Exception e) {
+            try {
+                Intent intentE = new Intent(Intent.ACTION_VIEW, Uri.parse(videoLink));
+                intentE.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intentE.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                context.startActivity(intentE);
+            } catch (Exception ee) {
+                setToast(context, "Failed to open Channel.");
+            }
+
+        }
+
+    }
+
+    private static String youtubePackage(Context context) {
+        PackageManager manager;
+        if (isLeanback(manager = context.getPackageManager())) {
+            return "com.google.android.youtube.tv";
+        } else {
+            return isAndroidTv(manager) ? "com.google.android.youtube.googletv" : "com.google.android.youtube";
+        }
+    }
+
+    private static boolean isLeanback(PackageManager packageManager) {
+        return packageManager.hasSystemFeature("android.software.leanback");
+    }
+
+    private static boolean isAndroidTv(PackageManager packageManager) {
+        return packageManager.hasSystemFeature("com.google.android.tv");
+    }
+
+
     public static void setLog(String log) {
         Log.d("adPromote", log);
+    }
+
+    public static void setToast(Context context, String toast) {
+        Toast.makeText(context, toast, Toast.LENGTH_SHORT).show();
     }
 
 

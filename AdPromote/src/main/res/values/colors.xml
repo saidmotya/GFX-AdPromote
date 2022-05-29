@@ -10,6 +10,13 @@
     <color name="color_rating_light">#9F9F9F</color>
     <color name="color_rating_dark">#606060</color>
 
+    <color name="color_youtube_red_light">#E30511</color>
+    <color name="color_youtube_red_dark">#A1030C</color>
+    <color name="color_youtube_gray">#F1F1F1</color>
+
+    <color name="color_youtube_grayb">#FF9800</color>
+
+
 
 
 

@@ -7,19 +7,35 @@
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">false</item>
+        <!--
         <item name="android:windowAnimationStyle">@style/AdStyleFromBottom</item>
+        -->
 
     </style>
 
-    <style name="AdStyleFromBottom" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowEnterAnimation">@anim/slide_up</item>
-        <item name="android:windowExitAnimation">@anim/slide_down</item>
-    </style>
+    <!--
+   <style name="AdStyleFromBottom" parent="Theme.MaterialComponents.Light.NoActionBar">
+       <item name="android:windowEnterAnimation">@anim/slide_up</item>
+       <item name="android:windowExitAnimation">@anim/slide_down</item>
+   </style>
+   -->
 
-    <style name="RatingBarStyle" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/color_rating_light</item>
-        <item name="colorControlActivated">@color/color_rating_dark</item>
-    </style>
+   <style name="RatingBarStyle" parent="Theme.AppCompat">
+       <item name="colorControlNormal">@color/color_rating_light</item>
+       <item name="colorControlActivated">@color/color_rating_dark</item>
+   </style>
+
+   <style name="seekBarStyle" parent="@android:style/Widget.SeekBar">
+       <item name="android:indeterminateOnly">false</item>
+       <item name="android:progressDrawable">@drawable/seekbar</item>
+       <item name="android:thumb">@drawable/seek_oval_red</item>
+       <item name="android:splitTrack">false</item>
+       <item name="android:minHeight">5dip</item>
+       <item name="android:maxHeight">4dip</item>
+   </style>
+
+
+
 
 
 </resources>

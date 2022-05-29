@@ -7,7 +7,9 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gfx.adPromote.AppPromote;
-import com.gfx.adPromote.Interfaces.OnPromoteListener;
+import com.gfx.adPromote.Interfaces.OnPromoteAppListener;
+import com.gfx.adPromote.Interfaces.OnPromoteAppWithYoutubeListener;
+import com.gfx.adPromote.Interfaces.OnPromoteYoutubeListener;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -19,22 +21,56 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        AppPromote.initializePromote(this,GFX.AdPromoteLink);
-        AppPromote.setOnPromoteListener(new OnPromoteListener() {
+        AppPromote.initializeAppWithYoutube(this,GFX.AppWithYoutubePromo);
+        AppPromote.setOnPromoteAppWithYoutubeListener(new OnPromoteAppWithYoutubeListener() {
             @Override
-            public void onInitializeSuccessful() {
-                GFX.setLog("AppPromote onInitializeSuccessful");
+            public void onAppWithYoutubeInitializeSuccessful() {
+                GFX.setLog("initializeAppPromote onInitializeSuccessful");
                 startActivity(false);
             }
 
             @Override
-            public void onInitializeFailed(String error) {
-                GFX.setLog("AppPromote onInitializeFailed : "+error);
+            public void onAppWithYoutubeInitializeFailed(String error) {
+                GFX.setLog("initializeAppWithYoutube onInitializeFailed : "+error);
                 startActivity(true);
             }
         });
 
 
+        /*
+        AppPromote.initializeYoutubePromote(this,GFX.YoutubePromo);
+        AppPromote.setOnPromoteYoutubeListener(new OnPromoteYoutubeListener() {
+            @Override
+            public void onYoutubeInitializeSuccessful() {
+                GFX.setLog("initializeYoutube onInitializeSuccessful");
+                startActivity(false);
+            }
+
+            @Override
+            public void onYoutubeInitializeFailed(String error) {
+                GFX.setLog("initializeYoutube onInitializeFailed : "+error);
+                startActivity(true);
+            }
+        });
+
+         */
+
+        /*
+        AppPromote.initializeAppPromote(this,GFX.AppPromo);
+        AppPromote.setOnPromoteListener(new OnPromoteAppListener() {
+            @Override
+            public void onInitializeSuccessful() {
+                GFX.setLog("initializeYoutube onInitializeSuccessful");
+                startActivity(false);
+            }
+
+            @Override
+            public void onInitializeFailed(String error) {
+                GFX.setLog("initializeAppPromote onInitializeFailed : "+error);
+                startActivity(true);
+            }
+        });
+         */
 
 
     }

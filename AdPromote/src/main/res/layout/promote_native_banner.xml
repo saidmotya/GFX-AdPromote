@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@android:color/transparent"
         app:cardCornerRadius="@dimen/_8sdp"
         app:cardElevation="0dp">
 
@@ -147,7 +147,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/sans_regular"
-                            android:gravity="center"
                             android:lines="1"
                             android:text="@string/banner_ad_title"
                             android:textColor="#2E2E2E"
@@ -270,7 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
                 android:minHeight="@dimen/_27sdp"
                 android:paddingLeft="@dimen/_70sdp"
                 android:paddingRight="@dimen/_70sdp"

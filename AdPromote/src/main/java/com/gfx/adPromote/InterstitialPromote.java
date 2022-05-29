@@ -85,7 +85,7 @@ public class InterstitialPromote extends Dialog {
     public InterstitialPromote(@NonNull Activity activity) {
         super(activity, R.style.InterstitialStyle);
         this.activity = activity;
-        setContentView(R.layout.promote_interstitial);
+        setContentView(R.layout.promote_interstitial_advance);
         promotePrefs = new PromotePrefs(activity.getApplicationContext());
         setCancelable(false);
         initializeData();
@@ -175,14 +175,14 @@ public class InterstitialPromote extends Dialog {
     private void applyStyle(int style) {
         switch (style) {
             case 1: //style 1 : Advances
-                setContentView(R.layout.promote_interstitial_2);
+                setContentView(R.layout.promote_interstitial_normal);
                 break;
             case 2: //style 2 : Standard
-                setContentView(R.layout.promote_interstitial);
+                setContentView(R.layout.promote_interstitial_advance);
                 break;
 
             default:
-                setContentView(R.layout.promote_interstitial);
+                setContentView(R.layout.promote_interstitial_advance);
                 break;
 
         }
@@ -229,7 +229,7 @@ public class InterstitialPromote extends Dialog {
                 }
                 dismiss();
                 if (BuildConfig.DEBUG) {
-                    AppsConfig.setLog("The Interstitial was dismiss because something wrong !");
+                    AppsConfig.setLog("The Interstitial was dismiss.");
                 }
             }
         } catch (Exception e) {
@@ -254,11 +254,20 @@ public class InterstitialPromote extends Dialog {
             int width = displayMetrics.widthPixels;
             int paddingLeftRight = width / 4;
             viewPager.setPadding(paddingLeftRight, 0, paddingLeftRight, 0);
-            viewPager.setPageTransformer(false, new PagerTransformer());
+            viewPager.setPageMargin(5);
+            viewPager.setPageTransformer(false, new PagerTransformer(viewPager));
 
             AdapterPager adapterPager = new AdapterPager(activity.getApplicationContext(), screenShot(index));
             viewPager.setAdapter(adapterPager);
+
+            //if more than 3 screen make the second screen in center :
+            int sizeOfScreen = screenShot(index).size();
+            if(sizeOfScreen >= 3){
+               //viewPager.setCurrentItem(1);
+            }
             springDotsIndicator.setViewPager(viewPager);
+
+
             adapterPager.setOnPagerScreenListener(new OnPagerScreenListener() {
                 @Override
                 public void onPagerScreenListenerLoaded() {
