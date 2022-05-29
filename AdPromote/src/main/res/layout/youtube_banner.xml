@@ -1,0 +1,281 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/banner_body"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_youtube_red_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/sans_medium"
+            android:padding="@dimen/_2sdp"
+            android:text="AD"
+            android:textColor="@color/color_youtube_red_dark"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="normal"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/subscribe"
+            android:layout_toEndOf="@+id/ad"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp">
+
+                    <ImageView
+                        android:id="@+id/icons"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription" />
+
+                    <RelativeLayout
+                        android:id="@+id/banner_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D3D3D3"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/sans_regular"
+                            android:gravity="center"
+                            android:text="Ad"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="normal"
+                            tools:ignore="HardcodedText" />
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminateDrawable="@drawable/sp_progress" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/content_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/video_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_medium"
+                    android:lines="1"
+                    android:text="@string/banner_ad_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables,UselessParent">
+
+                    <ImageView
+                        android:id="@+id/ic_eye"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:background="@drawable/ic_eye"
+                        android:backgroundTint="@color/color_youtube_gray"
+                        android:contentDescription="@string/todo" />
+
+                    <TextView
+                        android:id="@+id/views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/sans_regular"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="91,014 views"
+                        android:textColor="@color/color_youtube_gray"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:background="@color/color_youtube_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp">
+
+                        <ImageView
+                            android:id="@+id/ic_like"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:background="@drawable/ic_like_white"
+                            android:backgroundTint="@color/color_youtube_gray"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/like_counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:fontFamily="@font/sans_regular"
+                            android:gravity="center"
+                            android:text="5.2K"
+                            android:textColor="@color/color_youtube_gray"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="normal"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_medium"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/youtube_description"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables,UselessParent">
+
+
+                    <TextView
+                        android:id="@+id/onYoutube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/sans_medium"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="@string/watch_on"
+                        android:textColor="@color/color_youtube_gray"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ic_youtube"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:background="@drawable/ic_youtube"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/ic_youtubeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sans_medium"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="Youtube Now !"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/subscribe_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sans_medium"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="@string/subscribe"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

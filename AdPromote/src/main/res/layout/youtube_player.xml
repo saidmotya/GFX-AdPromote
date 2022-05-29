@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:background="#020202"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seek_play">
+
+        <ImageView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/play_video"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/sp_play_video"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_play"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_play"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/ic_play_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sans_medium"
+                android:layout_centerInParent="true"
+                android:text="100 %"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+            <ProgressBar
+                android:id="@+id/ic_play_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="10"
+                android:progressDrawable="@drawable/sp_progress_download"
+                android:secondaryProgress="100" />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="#050505"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            tools:ignore="UseCompoundDrawables,UselessParent">
+
+
+            <TextView
+                android:id="@+id/on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sans_medium"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/watch_on"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_6sdp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:background="@drawable/ic_youtube"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/sans_medium"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Youtube"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7sdp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seek_play">
+
+        <!--loading progress ad-->
+        <RelativeLayout
+            android:id="@+id/preview_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B8B8B8"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="center"
+                    android:text="Ad"
+                    android:textColor="#555555"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateDrawable="@drawable/sp_progress" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <!--Youtube control-->
+    <SeekBar
+        android:id="@+id/seek_play"
+        style="@style/seekBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/yt_control"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="0dp"
+        android:max="100"
+        android:progress="20" />
+
+    <RelativeLayout
+        android:id="@+id/yt_control"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/play_video2"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_play"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_volume_up" />
+
+            <SeekBar
+                android:id="@+id/seekVol"
+                style="@style/seekBarStyle"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:max="20"
+                android:progress="10"
+                android:thumb="@drawable/seek_oval_red_vol" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_settings" />
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_fullscreen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-14:12
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-14:12
+	package
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:5:5-32
+		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:4:5-51
+	xmlns:android
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:22-73
+application
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:5-56
+	android:usesCleartextTraffic
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:18-53
+uses-sdk
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml

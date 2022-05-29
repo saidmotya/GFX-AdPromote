@@ -1,0 +1,26 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.gfx.adPromote" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="21"
+7-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+8        android:targetSdkVersion="31" />
+8-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
+9
+10    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+10-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:7:5-79
+10-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:7:22-76
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:8:5-67
+11-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:8:22-64
+12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+12-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:5-76
+12-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:22-73
+13
+14    <application android:usesCleartextTraffic="true" />
+14-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:5-56
+14-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:18-53
+15
+16</manifest>
