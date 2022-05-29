@@ -17,7 +17,7 @@ allprojects {
 *Step 2.* Add the dependency in the form
 ```gradle
 dependencies {
-    implementation 'com.github.saidmotya:GFX-AdPromote:1.0.0'
+    implementation 'com.github.saidmotya:GFX-AdPromote:1.0.2'
 }
 ```
 
