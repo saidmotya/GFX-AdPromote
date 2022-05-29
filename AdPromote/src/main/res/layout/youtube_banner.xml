@@ -220,8 +220,8 @@
 
                     <ImageView
                         android:id="@+id/ic_youtube"
-                        android:layout_width="@dimen/_14sdp"
-                        android:layout_height="@dimen/_14sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_5sdp"
                         android:background="@drawable/ic_youtube"/>
 
