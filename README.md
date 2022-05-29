@@ -207,7 +207,7 @@ When our lib initialize successful and check the interstitial is loaded than sho
 
 
 ## File json:
-* Ther json file must to be uploaded in your server. [File Json](https://github.com/saidmotya/GFX-AdPromote/blob/020161233f0f5790318098d78c01af4ada85c6b1/ScreenShot/MyPromote.json)
+* The json file must to be uploaded in your server. [File Json](https://github.com/saidmotya/GFX-AdPromote/blob/020161233f0f5790318098d78c01af4ada85c6b1/ScreenShot/MyPromote.json)
 
 ## Help Maintenance
 If you could help me to continue maintain this repo, buying me a cup of coffee will make my life really happy and get much energy out of it.
