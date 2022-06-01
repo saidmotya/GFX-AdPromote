@@ -264,7 +264,7 @@
                     android:fontFamily="@font/sans_medium"
                     android:text="@string/youtube_greeting"
                     android:textAllCaps="false"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:textColor="#C60000"
                     app:drawableStartCompat="@drawable/ic_line"
                     android:textSize="@dimen/_18sdp" />

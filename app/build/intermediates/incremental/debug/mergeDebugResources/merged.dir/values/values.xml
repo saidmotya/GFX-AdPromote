@@ -11787,6 +11787,12 @@
         <attr format="color" name="telltales_tailColor"/>
         <attr format="float" name="telltales_tailScale"/>
     </declare-styleable>
+    <declare-styleable name="NativeBannerYoutube">
+        <attr format="string" name="nativeBanner_yt_titleButton"/>
+        <attr format="color" name="nativeBanner_yt_buttonColor"/>
+        <attr format="color" name="nativeBanner_yt_bodyColor"/>
+
+    </declare-styleable>
     <declare-styleable name="NativeView">
         <attr format="string" name="native_installTitle"/>
         <attr format="color" name="native_installColor"/>

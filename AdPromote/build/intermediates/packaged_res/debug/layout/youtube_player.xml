@@ -90,11 +90,11 @@
 
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="@dimen/_12sdp"
-                android:layout_height="@dimen/_12sdp"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_2sdp"
-                android:background="@drawable/ic_youtube"/>
+                android:background="@drawable/ic_ytb"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -127,8 +127,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#B8B8B8"
-            android:visibility="gone"
-            android:gravity="center">
+            android:gravity="center"
+            android:visibility="gone">
 
             <RelativeLayout
                 android:layout_width="@dimen/_60sdp"

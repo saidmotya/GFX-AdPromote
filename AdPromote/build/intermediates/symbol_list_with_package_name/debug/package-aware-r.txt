@@ -855,6 +855,9 @@ attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
 attr multiChoiceItemLayout
+attr nativeBanner_yt_bodyColor
+attr nativeBanner_yt_buttonColor
+attr nativeBanner_yt_titleButton
 attr native_bodyColor
 attr native_contentColor
 attr native_installColor
@@ -3240,6 +3243,7 @@ drawable ic_settings
 drawable ic_volume_up
 drawable ic_youtube
 drawable ic_youtube_red
+drawable ic_ytb
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -3281,12 +3285,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable promo_test
 drawable seek_oval_red
 drawable seek_oval_red_vol
 drawable seekbar
 drawable sp_body_interstitial
 drawable sp_bottom_red
 drawable sp_button
+drawable sp_button_tt
 drawable sp_gray
 drawable sp_oval_gray
 drawable sp_play_video
@@ -4025,6 +4031,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout worm_dot_layout
 layout youtube_banner
+layout youtube_banner_native
 layout youtube_interstitial_advance
 layout youtube_interstitial_normal
 layout youtube_native
@@ -5350,6 +5357,7 @@ styleable MotionLabel android_autoSizeTextType android_fontFamily android_gravit
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable NativeBannerYoutube nativeBanner_yt_bodyColor nativeBanner_yt_buttonColor nativeBanner_yt_titleButton
 styleable NativeView native_bodyColor native_contentColor native_installColor native_installRadius native_installTitle
 styleable NativeYoutube native_yt_adColor native_yt_bodyColor native_yt_buttonColor native_yt_buttonRadius native_yt_showPreview native_yt_titleButton
 styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive popUpToSaveState restoreState

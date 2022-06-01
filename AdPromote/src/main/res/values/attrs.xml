@@ -27,6 +27,13 @@
 
     </declare-styleable>
 
+    <declare-styleable name="NativeBannerYoutube">
+        <attr name="nativeBanner_yt_titleButton" format="string" />
+        <attr name="nativeBanner_yt_buttonColor" format="color" />
+        <attr name="nativeBanner_yt_bodyColor" format="color" />
+
+    </declare-styleable>
+
     <declare-styleable name="BannerYoutube">
         <attr name="banner_yt_titleButton" format="string" />
         <attr name="banner_yt_description" format="string" />

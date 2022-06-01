@@ -21,7 +21,9 @@
         </activity>
 
         <activity android:name="com.gfx.adPromote.ads.MainActivity" />
-        <activity android:name="com.gfx.adPromote.ads.SecondActivity" />
+
+        <activity android:name="com.gfx.adPromote.ads.AppsDemoActivity" />
+        <activity android:name="com.gfx.adPromote.ads.YoutubeDemoActivity" />
 
     </application>
 

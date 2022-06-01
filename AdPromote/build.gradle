@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.gfx.adPromote'
                 artifactId = 'AdPromote'
-                version = '1.0.2'
+                version = '1.0.4'
             }
         }
     }

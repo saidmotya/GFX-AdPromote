@@ -32,8 +32,10 @@ public class AppsConfig {
     public static String youtubeTitle = "title";
     public static String youtubeIcon = "icon";
     public static String youtubePreview = "preview";
+    public static String youtubePreviewSmall = "preview-small";
     public static String youtubeWatch = "watch";
     public static String youtubeChannel = "channel";
+    public static String youtubeDescription = "Description";
 
 
     public static String[] downloadCount = new String[]{
@@ -159,7 +161,7 @@ public class AppsConfig {
 
     }
 
-    private static String youtubePackage(Context context) {
+    public static String youtubePackage(Context context) {
         PackageManager manager;
         if (isLeanback(manager = context.getPackageManager())) {
             return "com.google.android.youtube.tv";

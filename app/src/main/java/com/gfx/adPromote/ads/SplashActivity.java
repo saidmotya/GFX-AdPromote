@@ -1,5 +1,6 @@
 package com.gfx.adPromote.ads;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,11 +8,10 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gfx.adPromote.AppPromote;
-import com.gfx.adPromote.Interfaces.OnPromoteAppListener;
 import com.gfx.adPromote.Interfaces.OnPromoteAppWithYoutubeListener;
-import com.gfx.adPromote.Interfaces.OnPromoteYoutubeListener;
 
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
 
@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        AppPromote.initializeAppWithYoutube(this,GFX.AppWithYoutubePromo);
+        AppPromote.initializeAppWithYoutube(getApplicationContext(),GFX.AppWithYoutubePromo);
         AppPromote.setOnPromoteAppWithYoutubeListener(new OnPromoteAppWithYoutubeListener() {
             @Override
             public void onAppWithYoutubeInitializeSuccessful() {
@@ -80,12 +80,12 @@ public class SplashActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 }
             },1000*3);
         }else {
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
 

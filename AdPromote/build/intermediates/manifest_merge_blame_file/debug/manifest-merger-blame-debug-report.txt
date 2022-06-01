@@ -18,9 +18,12 @@
 12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 12-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:5-76
 12-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:22-73
-13
-14    <application android:usesCleartextTraffic="true" />
-14-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:5-56
-14-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:18-53
-15
-16</manifest>
+13    <uses-permission android:name="android.permission.VIBRATE" />
+13-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:10:5-66
+13-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:10:22-63
+14
+15    <application android:usesCleartextTraffic="true" />
+15-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:12:5-68
+15-->C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:12:18-53
+16
+17</manifest>

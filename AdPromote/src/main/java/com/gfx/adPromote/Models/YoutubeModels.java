@@ -9,18 +9,22 @@ public class YoutubeModels {
 
     private String title;
     private String icon;
-    private String preview;
+    private String previewFull;
+    private String previewSmall;
     private String watch;
     private String channelID;
-    private String allModels ;
+    private String description;
+    private String allModels;
 
-    public YoutubeModels(String title, String icon, String preview, String watch, String channelID) {
+    public YoutubeModels(String title, String icon, String previewFull, String previewSmall, String watch, String channelID,String description) {
         this.title = title;
         this.icon = icon;
-        this.preview = preview;
+        this.previewFull = previewFull;
+        this.previewSmall = previewSmall;
         this.watch = watch;
         this.channelID = channelID;
-        this.allModels = title+icon+preview+watch+channelID;
+        this.description = description ;
+        this.allModels = title + icon + previewFull + previewSmall + watch + channelID+description;
     }
 
     public String getTitle() {
@@ -39,12 +43,20 @@ public class YoutubeModels {
         this.icon = icon;
     }
 
-    public String getPreview() {
-        return preview;
+    public String getPreviewFull() {
+        return previewFull;
     }
 
-    public void setPreview(String preview) {
-        this.preview = preview;
+    public void setPreviewFull(String previewFull) {
+        this.previewFull = previewFull;
+    }
+
+    public String getPreviewSmall() {
+        return previewSmall;
+    }
+
+    public void setPreviewSmall(String previewSmall) {
+        this.previewSmall = previewSmall;
     }
 
     public String getWatch() {
@@ -69,5 +81,13 @@ public class YoutubeModels {
 
     public void setAllModels(String allModels) {
         this.allModels = allModels;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -242,7 +243,9 @@ public class NativeYoutube extends FrameLayout {
 
         String youtubeTitle = youtubeList.get(index).getTitle();
         String youtubeIcon = youtubeList.get(index).getIcon();
-        String youtubePreview = youtubeList.get(index).getPreview();
+
+        String youtubePreviewFull = youtubeList.get(index).getPreviewFull();
+        String youtubePreviewSmall = youtubeList.get(index).getPreviewSmall();
 
         String youtubeVideoLink = youtubeList.get(index).getWatch();
         String youtubeSubscribeID = youtubeList.get(index).getChannelID();
@@ -252,7 +255,7 @@ public class NativeYoutube extends FrameLayout {
         }
 
         loadIcon(youtubeIcon);
-        loadPreview(youtubePreview);
+        loadPreview(youtubePreviewFull,youtubePreviewSmall);
 
         title.setText(youtubeTitle);
 
@@ -286,12 +289,12 @@ public class NativeYoutube extends FrameLayout {
         subscribe.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(subscribe.getText().toString().equalsIgnoreCase("subscribe")){
+                if (subscribe.getText().toString().equalsIgnoreCase("subscribe")) {
                     if (onYoutubeNativeListener != null) {
                         onYoutubeNativeListener.onYoutubeNativeAdClicked("subscribe");
                     }
                     AppsConfig.youtubeSubscribeChannel(context, youtubeSubscribeID);
-                }else {
+                } else {
                     if (onYoutubeNativeListener != null) {
                         onYoutubeNativeListener.onYoutubeNativeAdClicked("play video");
                     }
@@ -322,25 +325,51 @@ public class NativeYoutube extends FrameLayout {
                 .into(icon);
     }
 
-    private void loadPreview(String preview) {
+    private void loadPreview(String previewFull, String previewSmall) {
+
         previewProgress.setVisibility(VISIBLE);
         playVideo.setVisibility(GONE);
-        Glide.with(context).load(preview)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .listener(new RequestListener<Drawable>() {
-                    @Override
-                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        return false;
-                    }
 
-                    @Override
-                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        previewProgress.setVisibility(GONE);
-                        playVideo.setVisibility(VISIBLE);
-                        return false;
-                    }
-                })
-                .into(videoPreview);
+        if (previewSmall.isEmpty()) {
+            //use the big Image :
+            Glide.with(context).load(previewFull)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .listener(new RequestListener<Drawable>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                            previewProgress.setVisibility(GONE);
+                            playVideo.setVisibility(VISIBLE);
+                            return false;
+                        }
+                    })
+                    .into(videoPreview);
+
+        } else {
+            //use small preview : 470 pixel * 159 pixel
+            Glide.with(context).load(previewSmall)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .listener(new RequestListener<Drawable>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                            return false;
+                        }
+
+                        @Override
+                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                            previewProgress.setVisibility(GONE);
+                            playVideo.setVisibility(VISIBLE);
+                            return false;
+                        }
+                    })
+                    .into(videoPreview);
+        }
+
+
     }
 
 

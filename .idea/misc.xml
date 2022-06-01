@@ -3,16 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_add_red.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_arrow_forward.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_like_white.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_notification_like.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_notification_play.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_notification_sub.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_play.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/ic_youtube.xml" value="0.2025" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/sp_body_interstitial.xml" value="0.2075" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/sp_button.xml" value="0.2075" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/sp_button_tt.xml" value="0.2075" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/sp_gray.xml" value="0.2075" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/sp_rectangle_line.xml" value="0.2075" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/drawable/sp_yt_ad_red.xml" value="0.2075" />
         <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/promote_banner.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/promote_native_banner.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_banner.xml" value="0.33" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_banner.xml" value="0.6697761194029851" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_banner_native.xml" value="0.33" />
         <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_interstitial_advance.xml" value="0.2" />
-        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_interstitial_normal.xml" value="0.22" />
-        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_native.xml" value="0.25" />
-        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_player.xml" value="0.22" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_interstitial_normal.xml" value="0.25" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_native.xml" value="0.33" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/AdPromote/src/main/res/layout/youtube_player.xml" value="0.5" />
         <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/app/src/main/res/layout/activity_second.xml" value="0.2" />
         <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Users/User/Desktop/GithubProject/GFX-AdPromote/app/src/main/res/layout/activity_youtube_demo.xml" value="0.25" />
       </map>
     </option>
   </component>

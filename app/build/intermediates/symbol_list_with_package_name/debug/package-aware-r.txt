@@ -854,6 +854,9 @@ attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
 attr multiChoiceItemLayout
+attr nativeBanner_yt_bodyColor
+attr nativeBanner_yt_buttonColor
+attr nativeBanner_yt_titleButton
 attr native_bodyColor
 attr native_contentColor
 attr native_installColor
@@ -3243,6 +3246,7 @@ drawable ic_settings
 drawable ic_volume_up
 drawable ic_youtube
 drawable ic_youtube_red
+drawable ic_ytb
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -3284,12 +3288,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable promo_test
 drawable seek_oval_red
 drawable seek_oval_red_vol
 drawable seekbar
 drawable sp_body_interstitial
 drawable sp_bottom_red
 drawable sp_button
+drawable sp_button_tt
 drawable sp_gray
 drawable sp_oval_gray
 drawable sp_play_video
@@ -3393,6 +3399,7 @@ id anticipate
 id app_description
 id app_download
 id app_name
+id appsPromote
 id arc
 id asConfigured
 id async
@@ -3400,7 +3407,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back
 id banner_body
 id banner_progress
 id banner_view
@@ -3412,6 +3418,7 @@ id bestChoice
 id blocking
 id body_color
 id bottom
+id bottomAd
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3551,7 +3558,6 @@ id grouping
 id groups
 id guideline
 id header_title
-id hello
 id hideable
 id home
 id homeAsUp
@@ -3582,6 +3588,10 @@ id install_txt
 id inter_icon_progress
 id inter_icons
 id inter_screen_progress
+id interstitialApps1
+id interstitialApps2
+id interstitialYoutube1
+id interstitialYoutube2
 id interstitial_app_name
 id interstitial_close
 id interstitial_install
@@ -3809,7 +3819,6 @@ id start
 id startHorizontal
 id startToEnd
 id startVertical
-id start_activity
 id staticLayout
 id staticPostLayout
 id stop
@@ -3863,6 +3872,7 @@ id title_template
 id toggle
 id toolbar
 id top
+id topAd
 id topPanel
 id touch_outside
 id transitionToEnd
@@ -3901,6 +3911,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id youtubePromote
 id yt_control
 id zero_corner_chip
 integer abc_config_activityDefaultDur
@@ -3996,9 +4007,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_apps_demo
 layout activity_main
-layout activity_second
 layout activity_splash
+layout activity_youtube_demo
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4102,6 +4114,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout worm_dot_layout
 layout youtube_banner
+layout youtube_banner_native
 layout youtube_interstitial_advance
 layout youtube_interstitial_normal
 layout youtube_native
@@ -5421,6 +5434,7 @@ styleable MotionLabel android_textSize android_typeface android_textStyle androi
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable NativeBannerYoutube nativeBanner_yt_bodyColor nativeBanner_yt_buttonColor nativeBanner_yt_titleButton
 styleable NativeView native_bodyColor native_contentColor native_installColor native_installRadius native_installTitle
 styleable NativeYoutube native_yt_adColor native_yt_bodyColor native_yt_buttonColor native_yt_buttonRadius native_yt_showPreview native_yt_titleButton
 styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive popUpToSaveState restoreState

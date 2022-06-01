@@ -57,17 +57,17 @@ public class InterstitialYoutube extends Dialog {
     private int descriptionColor = Color.parseColor("#252525"); //default color
 
     private String descriptionTitleText = getContext().getString(R.string.youtube_greeting);
-    private String descriptionText = getContext().getString(R.string.youtube_long_description); //default color
+    private String descriptionText = getContext().getString(R.string.youtube_long_description);
 
 
     private final Activity activity;
     private RelativeLayout closeAd;
-    private TextView closeTimer,adMark;
+    private TextView closeTimer, adMark;
     private ImageView icClose;
 
     private TextView title, views, likeCounter;
-    private AppCompatTextView subscribeText, descriptionTitle, subscribeButton;
-    private TextView description;
+    private AppCompatTextView subscribeText, descriptionShort, subscribeButton;
+    private TextView descriptionLong;
 
 
     private LinearLayout openAd;
@@ -125,8 +125,8 @@ public class InterstitialYoutube extends Dialog {
         likeCounter = findViewById(R.id.like_counter);
         subscribeText = findViewById(R.id.subscribeText);
 
-        descriptionTitle = findViewById(R.id.descriptionTitle);
-        description = findViewById(R.id.description);
+        descriptionShort = findViewById(R.id.descriptionTitle);
+        descriptionLong = findViewById(R.id.description);
         subscribeButton = findViewById(R.id.subscribeButton);
 
         icPlay = findViewById(R.id.ic_play);
@@ -165,12 +165,11 @@ public class InterstitialYoutube extends Dialog {
             openAdText.setTextColor(openAdTitleColorAdvance);
             generateOpenAdButton(openAdColorAdvance);
             generateAdMark(openAdColorAdvance);
-            descriptionTitle.setTextColor(descriptionTitleColor);
+            descriptionShort.setTextColor(descriptionTitleColor);
         }
         openAdText.setText(openAdTitle);
-        description.setTextColor(descriptionColor);
-        descriptionTitle.setText(descriptionTitleText);
-        description.setText(descriptionText);
+        descriptionLong.setTextColor(descriptionColor);
+        descriptionLong.setText(descriptionText);
     }
 
 
@@ -236,7 +235,7 @@ public class InterstitialYoutube extends Dialog {
             closeAd.setClickable(false);
             closeTimer.setVisibility(View.VISIBLE);
             icClose.setVisibility(View.GONE);
-            
+
             countDownTimer = new CountDownTimer(1000L * timer, 1000) {
                 public void onTick(long j) {
                     String count = String.valueOf(j / 1000);
@@ -364,10 +363,12 @@ public class InterstitialYoutube extends Dialog {
 
         String youtubeTitle = youtubeList.get(index).getTitle();
         String youtubeIcon = youtubeList.get(index).getIcon();
-        String youtubePreview = youtubeList.get(index).getPreview();
+        String youtubePreview = youtubeList.get(index).getPreviewFull();
 
         String youtubeVideoLink = youtubeList.get(index).getWatch();
         String youtubeSubscribeID = youtubeList.get(index).getChannelID();
+
+        String youtubeDescription = youtubeList.get(index).getDescription();
 
         if (onYoutubeInterstitialListener != null) {
             onYoutubeInterstitialListener.onYoutubeInterstitialLoaded();
@@ -377,6 +378,12 @@ public class InterstitialYoutube extends Dialog {
         loadPreview(youtubePreview);
 
         title.setText(youtubeTitle);
+        if (youtubeDescription.isEmpty() && descriptionTitleText != null) {
+            descriptionShort.setText(descriptionTitleText);
+        } else {
+            descriptionShort.setText(youtubeDescription);
+        }
+
 
         //loaded from prefs :
         String viewsCounter = promotePrefs.getViewsCounter(index);
@@ -634,7 +641,7 @@ public class InterstitialYoutube extends Dialog {
 
     }
 
-    public void setDescriptionTitle(String title) {
+    public void setDescriptionShort(String title) {
         this.descriptionTitleText = title;
         applyUI();
     }

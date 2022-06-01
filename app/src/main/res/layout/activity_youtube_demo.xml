@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/bottomAd">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="1- Youtube Native with preview :"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <com.gfx.adPromote.NativeYoutube
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:native_yt_adColor="#4CAF50"
+                app:native_yt_bodyColor="#F8F8F8"
+                app:native_yt_buttonColor="#673AB7"
+                app:native_yt_showPreview="true"
+                app:native_yt_titleButton="watch video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="2- Youtube Native without preview :"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <com.gfx.adPromote.NativeYoutube
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:native_yt_adColor="#FF1100"
+                app:native_yt_bodyColor="#F8F8F8"
+                app:native_yt_buttonColor="#FF1100"
+                app:native_yt_showPreview="false"
+                app:native_yt_titleButton="watch video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="3- Youtube Native Banner :"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <com.gfx.adPromote.NativeBannerYoutube
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:nativeBanner_yt_buttonColor="#9C27B0" />
+
+
+            <Button
+                android:id="@+id/interstitialYoutube1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Show Interstitial Style 1" />
+
+            <Button
+                android:id="@+id/interstitialYoutube2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Show Interstitial Style 2" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottomAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Youtube Banner Example :"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <com.gfx.adPromote.BannerYoutube
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:banner_yt_IconsColor="#171717"
+            app:banner_yt_bodyColor="#EFEFEF"
+            app:banner_yt_buttonColor="#2196F3"
+            app:banner_yt_contentColor="#171717" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

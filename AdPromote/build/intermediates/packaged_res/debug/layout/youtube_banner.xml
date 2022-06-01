@@ -223,7 +223,7 @@
                         android:layout_width="@dimen/_14sdp"
                         android:layout_height="@dimen/_14sdp"
                         android:layout_marginStart="@dimen/_5sdp"
-                        android:background="@drawable/ic_youtube"/>
+                        android:background="@drawable/ic_ytb"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/ic_youtubeText"

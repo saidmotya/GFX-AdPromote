@@ -854,6 +854,9 @@ int attr motion_postLayoutCollision 0x0
 int attr motion_triggerOnCollision 0x0
 int attr moveWhenScrollAtTop 0x0
 int attr multiChoiceItemLayout 0x0
+int attr nativeBanner_yt_bodyColor 0x0
+int attr nativeBanner_yt_buttonColor 0x0
+int attr nativeBanner_yt_titleButton 0x0
 int attr native_bodyColor 0x0
 int attr native_contentColor 0x0
 int attr native_installColor 0x0
@@ -3239,6 +3242,7 @@ int drawable ic_settings 0x0
 int drawable ic_volume_up 0x0
 int drawable ic_youtube 0x0
 int drawable ic_youtube_red 0x0
+int drawable ic_ytb 0x0
 int drawable m3_appbar_background 0x0
 int drawable m3_popupmenu_background_overlay 0x0
 int drawable m3_radiobutton_ripple 0x0
@@ -3280,12 +3284,14 @@ int drawable notification_template_icon_bg 0x0
 int drawable notification_template_icon_low_bg 0x0
 int drawable notification_tile_bg 0x0
 int drawable notify_panel_notification_icon_bg 0x0
+int drawable promo_test 0x0
 int drawable seek_oval_red 0x0
 int drawable seek_oval_red_vol 0x0
 int drawable seekbar 0x0
 int drawable sp_body_interstitial 0x0
 int drawable sp_bottom_red 0x0
 int drawable sp_button 0x0
+int drawable sp_button_tt 0x0
 int drawable sp_gray 0x0
 int drawable sp_oval_gray 0x0
 int drawable sp_play_video 0x0
@@ -4024,6 +4030,7 @@ int layout text_view_with_theme_line_height 0x0
 int layout text_view_without_line_height 0x0
 int layout worm_dot_layout 0x0
 int layout youtube_banner 0x0
+int layout youtube_banner_native 0x0
 int layout youtube_interstitial_advance 0x0
 int layout youtube_interstitial_normal 0x0
 int layout youtube_native 0x0
@@ -6761,6 +6768,10 @@ int[] styleable MotionTelltales { 0x0, 0x0, 0x0 }
 int styleable MotionTelltales_telltales_tailColor 0
 int styleable MotionTelltales_telltales_tailScale 1
 int styleable MotionTelltales_telltales_velocityMode 2
+int[] styleable NativeBannerYoutube { 0x0, 0x0, 0x0 }
+int styleable NativeBannerYoutube_nativeBanner_yt_bodyColor 0
+int styleable NativeBannerYoutube_nativeBanner_yt_buttonColor 1
+int styleable NativeBannerYoutube_nativeBanner_yt_titleButton 2
 int[] styleable NativeView { 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable NativeView_native_bodyColor 0
 int styleable NativeView_native_contentColor 1

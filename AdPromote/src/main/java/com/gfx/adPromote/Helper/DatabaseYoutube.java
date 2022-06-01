@@ -22,9 +22,12 @@ public class DatabaseYoutube extends SQLiteOpenHelper {
 
     private static final String COLUMN_TITLE = "youtube_title";
     private static final String COLUMN_ICON = "youtube_icon";
-    private static final String COLUMN_PREVIEW = "youtube_preview";
+    private static final String COLUMN_PREVIEW_FULL = "youtube_preview";
+    private static final String COLUMN_PREVIEW_SMALL = "youtube_preview_small";
+
     private static final String COLUMN_WATCH_VIDEO = "youtube_video";
     private static final String COLUMN_CHANNEL_ID = "youtube_channel";
+    private static final String COLUMN_DESCRIPTION = "youtube_description";
 
     private static final String COLUMN_ALl_YOUTUBE = "AllYoutube";
     private static final String DATABASE_NAME = "databaseYoutube.sqlite";
@@ -42,9 +45,11 @@ public class DatabaseYoutube extends SQLiteOpenHelper {
         CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
                 + COLUMN_TITLE + " TEXT,"
                 + COLUMN_ICON + " TEXT,"
-                + COLUMN_PREVIEW + " TEXT,"
+                + COLUMN_PREVIEW_FULL + " TEXT,"
+                + COLUMN_PREVIEW_SMALL + " TEXT,"
                 + COLUMN_WATCH_VIDEO + " TEXT,"
                 + COLUMN_CHANNEL_ID + " TEXT,"
+                + COLUMN_DESCRIPTION + " TEXT,"
                 + COLUMN_ALl_YOUTUBE + " TEXT"
                 + ")";
         db.execSQL(CREATE_TABLE);
@@ -56,21 +61,23 @@ public class DatabaseYoutube extends SQLiteOpenHelper {
     }
 
 
-    public void addYoutubeItem(String title, String icon, String preview, String watch, String id) {
+    public void addYoutubeItem(String title, String icon, String preview, String previewSmall, String watch, String id, String description) {
         SQLiteDatabase database = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_TITLE, title);
         contentValues.put(COLUMN_ICON, icon);
-        contentValues.put(COLUMN_PREVIEW, preview);
+        contentValues.put(COLUMN_PREVIEW_FULL, preview);
+        contentValues.put(COLUMN_PREVIEW_SMALL, previewSmall);
         contentValues.put(COLUMN_WATCH_VIDEO, watch);
         contentValues.put(COLUMN_CHANNEL_ID, id);
-        contentValues.put(COLUMN_ALl_YOUTUBE, title + icon + preview + watch + id);
+        contentValues.put(COLUMN_DESCRIPTION, description);
+        contentValues.put(COLUMN_ALl_YOUTUBE, title + icon + preview + watch + id + description);
         database.insert(TABLE_NAME, null, contentValues);
         database.close();
     }
 
-    public Integer deleteYoutubeItem(String title, String icon, String preview, String watch, String id) {
-        String[] allColumn = new String[]{title + icon + preview + watch + id};
+    public Integer deleteYoutubeItem(String title, String icon, String preview,String previewSmall, String watch, String id,String desc) {
+        String[] allColumn = new String[]{title + icon + preview +previewSmall+ watch + id+desc};
         return getWritableDatabase().delete(TABLE_NAME, COLUMN_ALl_YOUTUBE + " = ?", allColumn);
     }
 
@@ -91,12 +98,16 @@ public class DatabaseYoutube extends SQLiteOpenHelper {
                 @SuppressLint("Range")
                 String icons = cursor.getString(cursor.getColumnIndex(COLUMN_ICON));
                 @SuppressLint("Range")
-                String preview = cursor.getString(cursor.getColumnIndex(COLUMN_PREVIEW));
+                String preview = cursor.getString(cursor.getColumnIndex(COLUMN_PREVIEW_FULL));
+                @SuppressLint("Range")
+                String previewSmall = cursor.getString(cursor.getColumnIndex(COLUMN_PREVIEW_SMALL));
                 @SuppressLint("Range")
                 String watch = cursor.getString(cursor.getColumnIndex(COLUMN_WATCH_VIDEO));
                 @SuppressLint("Range")
                 String channelId = cursor.getString(cursor.getColumnIndex(COLUMN_CHANNEL_ID));
-                YoutubeModels youtubeData = new YoutubeModels(title, icons, preview, watch, channelId);
+                @SuppressLint("Range")
+                String channelDescription = cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION));
+                YoutubeModels youtubeData = new YoutubeModels(title, icons, preview, previewSmall, watch, channelId,channelDescription);
                 youtubeModels.add(youtubeData);
                 isNull = false;
             } while (cursor.moveToNext());

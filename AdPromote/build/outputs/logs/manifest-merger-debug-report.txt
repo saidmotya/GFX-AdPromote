@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-14:12
-INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-14:12
-INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-14:12
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:2:1-17:12
 	package
 		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:5:5-32
 		INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml
@@ -23,10 +23,14 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:5-76
 	android:name
 		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:9:22-73
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:10:22-63
 application
-ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:5-56
+ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:12:5-68
 	android:usesCleartextTraffic
-		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:11:18-53
+		ADDED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml:12:18-53
 uses-sdk
 INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\User\Desktop\GithubProject\GFX-AdPromote\AdPromote\src\main\AndroidManifest.xml

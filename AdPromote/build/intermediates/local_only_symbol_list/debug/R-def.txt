@@ -16,6 +16,9 @@ attr? banner_yt_contentColor
 attr? banner_yt_description
 attr? banner_yt_titleButton
 attr? banner_yt_titleColor
+attr? nativeBanner_yt_bodyColor
+attr? nativeBanner_yt_buttonColor
+attr? nativeBanner_yt_titleButton
 attr? native_bodyColor
 attr? native_contentColor
 attr? native_installColor
@@ -54,12 +57,15 @@ drawable ic_settings
 drawable ic_volume_up
 drawable ic_youtube
 drawable ic_youtube_red
+drawable ic_ytb
+drawable promo_test
 drawable seek_oval_red
 drawable seek_oval_red_vol
 drawable seekbar
 drawable sp_body_interstitial
 drawable sp_bottom_red
 drawable sp_button
+drawable sp_button_tt
 drawable sp_gray
 drawable sp_oval_gray
 drawable sp_play_video
@@ -169,6 +175,7 @@ layout promote_interstitial_advance
 layout promote_interstitial_normal
 layout promote_native_banner
 layout youtube_banner
+layout youtube_banner_native
 layout youtube_interstitial_advance
 layout youtube_interstitial_normal
 layout youtube_native
@@ -195,5 +202,6 @@ style RatingBarStyle
 style seekBarStyle
 styleable BannerView banner_installTitle banner_installColor banner_contentColor banner_bodyColor
 styleable BannerYoutube banner_yt_titleButton banner_yt_description banner_yt_titleColor banner_yt_buttonColor banner_yt_contentColor banner_yt_bodyColor banner_yt_IconsColor
+styleable NativeBannerYoutube nativeBanner_yt_titleButton nativeBanner_yt_buttonColor nativeBanner_yt_bodyColor
 styleable NativeView native_installTitle native_installColor native_contentColor native_bodyColor native_installRadius
 styleable NativeYoutube native_yt_titleButton native_yt_buttonColor native_yt_adColor native_yt_bodyColor native_yt_showPreview native_yt_buttonRadius

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.gfx.adPromote.ads.app-merged_res-36:/layout_activity_apps_demo.xml.flat",
+        "source": "com.gfx.adPromote.ads.app-main-38:/layout/activity_apps_demo.xml"
+    },
+    {
         "merged": "com.gfx.adPromote.ads.app-merged_res-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "com.gfx.adPromote.ads.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
     },
@@ -36,8 +40,8 @@
         "source": "com.gfx.adPromote.ads.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.gfx.adPromote.ads.app-merged_res-36:/layout_activity_second.xml.flat",
-        "source": "com.gfx.adPromote.ads.app-main-38:/layout/activity_second.xml"
+        "merged": "com.gfx.adPromote.ads.app-merged_res-36:/layout_activity_youtube_demo.xml.flat",
+        "source": "com.gfx.adPromote.ads.app-main-38:/layout/activity_youtube_demo.xml"
     },
     {
         "merged": "com.gfx.adPromote.ads.app-merged_res-36:/layout_activity_splash.xml.flat",

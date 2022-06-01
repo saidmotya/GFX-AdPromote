@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFEF"
-    tools:context=".MainActivity">
+    android:background="#E8E8E8"
+    tools:context=".YoutubeDemoActivity">
 
 
-    <com.gfx.adPromote.NativePromote
-        android:id="@+id/native_ad"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:native_installColor="#4CAF50"
-        app:native_installRadius="5"
-        app:native_installTitle="Install" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/start_activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Start Activity" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Apps Promote AdsType :"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
 
+        <Button
+            android:id="@+id/appsPromote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Apps Promote" />
 
-    <com.gfx.adPromote.BannerPromote
-        android:id="@+id/banner_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:banner_bodyColor="#FFFFFF"
-        app:banner_contentColor="#E41000"
-        app:banner_installColor="#FF5722"
-        app:banner_installTitle="Install"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Youtube Channel Promote :"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
 
+        <Button
+            android:id="@+id/youtubePromote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Youtube Promote" />
 
+    </LinearLayout>
 </RelativeLayout>
