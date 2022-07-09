@@ -5,13 +5,17 @@
 An Android library for member secretGFX group, This can be used to growing your apps and get more install via a simple banner view & native view and interstitial dialog.
 
 # GFX-AdPromote-Youtube
-Added Youtube to promote your channel insid your application android and get more traffic to your videos (Views & Subscribe ) with attractif design :
-1- Intersitital : 2 style.
-2- Banner       : 320*50 dp.
-3- Native       : 3 type of native > Full Native, Banner Native, Native without preview player.
+Added YoutubePromote to promote your channel inside your application android and get more traffic to your videos (Views & Subscribe ) with attractif design :
+*1- Intersitital :* 2 style.
+*2- Banner       :* 320*50 dp.
+*3- Native       :* 3 type of native > Full Native, Banner Native, Native without preview player.
 
 ## Youtube Preview :
+
+*Native Example*
 ![Native Example](https://github.com/saidmotya/GFX-AdPromote/blob/master/ScreenShot/NativePreview.png)
+
+*Interstitial Example*
 ![Interstitial Example](https://github.com/saidmotya/GFX-AdPromote/blob/master/ScreenShot/InterstitialPreview.png)
 
 
