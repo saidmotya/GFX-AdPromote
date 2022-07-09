@@ -6,6 +6,7 @@ An Android library for member secretGFX group, This can be used to growing your 
 
 # GFX-AdPromote-Youtube
 Added YoutubePromote to promote your channel inside your application android and get more traffic to your videos (Views & Subscribe ) with attractif design :
+#
 *1- Intersitital :* 2 style.
 *2- Banner       :* 320*50 dp.
 *3- Native       :* 3 type of native > Full Native, Banner Native, Native without preview player.
