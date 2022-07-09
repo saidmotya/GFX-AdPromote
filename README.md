@@ -1,8 +1,19 @@
 [![](https://jitpack.io/v/saidmotya/GFX-AdPromote.svg)](https://jitpack.io/#saidmotya/GFX-AdPromote)
 
-# GFX-AdPromote
+# GFX-AdPromote-Apps
 
 An Android library for member secretGFX group, This can be used to growing your apps and get more install via a simple banner view & native view and interstitial dialog.
+
+# GFX-AdPromote-Youtube
+Added Youtube to promote your channel insid your application android and get more traffic to your videos (Views & Subscribe ) with attractif design :
+1- Intersitital : 2 style.
+2- Banner       : 320*50 dp.
+3- Native       : 3 type of native > Full Native, Banner Native, Native without preview player.
+
+## Youtube Preview :
+![Native Example](https://github.com/saidmotya/GFX-AdPromote/blob/master/ScreenShot/NativePreview.png)
+![Interstitial Example](https://github.com/saidmotya/GFX-AdPromote/blob/master/ScreenShot/InterstitialPreview.png)
+
 
 ## Installation
 *Step 1.* Add the JitPack repository to your project `build.gradle` file
